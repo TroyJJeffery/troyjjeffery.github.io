@@ -1,1 +1,0 @@
-# troyjjeffery.github.io
