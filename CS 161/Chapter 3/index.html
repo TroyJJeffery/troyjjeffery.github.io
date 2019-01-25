@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<title>Troy's GitHub - BlueJay</title>
+
+<body>
+
+<h1>Chapter 3</h1>
+
+<p>
+    <ol>
+        <li><h3>Exercise 3.1</h3></li>
+            <a href="https://docs.google.com/spreadsheets/d/1pRy-UVy9pCpZ6_Fh2BEqdwl328bte8zc46yuw3ECCyM/edit?usp=sharing">Google Sheets Drawing.</a><br>
+            A class is like a bone structure that dictates parameters the objects it spawns are created with.<br>
+            An object takes all of it's parameters from it's parent class.  From there it takes values which set it apart from<br>
+            other objects that are spawned from the parent class.
+
+        <li><h3>Exercise 3.2</h3></li>
+            Class diagrams can change as more objects are spawned from the class.<br>
+            Or as the class begins to have more dependencies to other classes.
+
+        <li><h3>Exercise 3.3</h3></li>
+            An object's diagram could change as it becomes "used" or attached to other Classes <br>
+            I imagine as well, that there are methods that relate two objects. <br>
+            In this context something like a parameter "classmates" would create a list with other people in the LabClass <br>
+
+        <li><h3>Exercise 3.4</h3></li>
+            public Instructor (boolean isTutor)<br>
+            tutor = isTutor;
+
+        <li><h3>Exercise 3.5</h3></li>
+            <img src="Images/E.3.5.png" alt="" width=30%>
+
+        <li><h3>Exercise 3.6</h3></li>
+            if(minutes == 0)
+                hour =+ 1
+
+        <li><h3>Exercise 3.7</h3></li>
+            <img src="Images/E.3.7.png" alt="" width=30%>
+
+        <li><h3>Exercise 3.8</h3></li>
+            Error: non-static method getValue() cannot be referenced from a static context
+
+        <li><h3>Exercise 3.9</h3></li>
+            Error: '.class' expected
+            So the issue is with the (int 5).  I'm guessing that when you put a data type there it thinks you are asking <br>
+            for an input.  Since we're calling on a accessor of an object we can't make a new variable on the variable.
+
+        <li><h3>Exercise 3.10</h3></li>
+            So it appears that nothing happens.  This isn't ideal because the end user doesn't know what's happened and will assume it's broken.<br>
+            I think that either one of two solutions could be implemented.  I'm guessing the one that the book wants to use is to <br>
+            set an error message and let the user know what the value range is.<br>
+            <br>
+            A second solution is: Why does our end user need to set the time with an exact value anyway?  It seems like a good way <br>
+            to allow things to break.  Most clocks now just allow the user to easily manipulate the increment mutator. <br>
+            I think that would be a good solution here.
+
+
+        <li><h3>Exercise 3.11</h3></li>
+            It would consider 0 outside the range of acceptable inputs.
+
+        <li><h3>Exercise 3.12</h3></li>
+            It would require only one condition to be true.<br>
+            It would open the inputs to only require a number 0 or greater OR a number less than the limit.<br>
+            The range now is no range at all as it allows any int, no matter the value.
+
+        <li><h3>Exercise 3.13</h3></li>
+            <pre>
+                ! false = true
+                not false = true
+
+                (34 != 33) && ! false = true
+                (true) && not false = true
+            </pre>
+
+        <li><h3>Exercise 3.14</h3></li>
+        <pre>
+            a && b
+
+            a _ b___Outcome
+            0 | 0 | true
+            1 | 0 | false
+            0 | 1 | false
+            1 | 1 | true
+        </pre>              
+
+        <li><h3>Exercise 3.15</h3></li>
+            <pre>
+            a && ! b
+
+            a__b____Outcome
+            0 | 0 | false
+            1 | 0 | true
+            0 | 1 | true
+            1 | 1 | false
+            </pre>
+
+        <li><h3>Exercise 3.16</h3></li>
+        <pre>    
+            a == b
+
+            a _ b___Outcome
+            0 | 0 | true
+            1 | 0 | false
+            0 | 1 | false
+            1 | 1 | true
+        </pre>
+
+        <li><h3>Exercise 3.17</h3></li>
+        <pre>
+            It would need another condition for each multiple of 10 the number has.<br>
+            ex. 10^0 = 1 ----No need for a condition here as you won't need a placeholder zero
+                10^1 = 10 --- You will need a condition if minutes < 10
+                10^2 = 100---- Now you will need a condition for min < 100 and min < 10
+        </pre>
+        <li><h3>Exercise 3.18</h3></li>
+            Those two statements should be equivalent.
+
+        <li><h3>Exercise 3.19</h3></li>
+            It's only a little surprising.  Java doing it's best to predict how we'll be using the tool assumes<br>
+            that if the first two things it encounters are numbers, then we probably want it to add the int's <br>
+            On the other hand, starting with a String let's java know that we're going to be using concatenation<br>
+            so right off the bat it assumes everything's a string.
+
+
+        <li><h3>Exercise 3.20</h3></li>
+
+
+        <li><h3>Exercise 3.21</h3></li>
+
+
+        <li><h3>Exercise 3.22</h3></li>
+
+
+        <li><h3>Exercise 3.23</h3></li>
+
+
+        <li><h3>Exercise 3.24</h3></li>
+
+
+        <li><h3>Exercise 3.25</h3></li>
+
+
+        <li><h3>Exercise 3.26</h3></li>
+
+
+        <li><h3>Exercise 3.27</h3></li>
+
+
+        <li><h3>Exercise 3.28</h3></li>
+
+
+        <li><h3>Exercise 3.29</h3></li>
+
+
+        <li><h3>Exercise 3.30</h3></li>
+
+
+        <li><h3>Exercise 3.31</h3></li>
+
+
+        <li><h3>Exercise 3.32</h3></li>
+
+
+        <li><h3>Exercise 3.33</h3></li>
+
+
+        <li><h3>Exercise 3.34</h3></li>
+
+
+        <li><h3>Exercise 3.35</h3></li>
+
+
+        <li><h3>Exercise 3.36</h3></li>
+
+
+        <li><h3>Exercise 3.37</h3></li>
+
+
+        <li><h3>Exercise 3.38</h3></li>
+
+
+        <li><h3>Exercise 3.39</h3></li>
+
+
+        <li><h3>Exercise 3.40</h3></li>
+
+
+        <li><h3>Exercise 3.41</h3></li>
+
+
+        <li><h3>Exercise 3.42</h3></li>
+
+
+        <li><h3>Exercise 3.43</h3></li>
+
+
+        <li><h3>Exercise 3.44</h3></li>
+
+
+        <li><h3>Exercise 3.45</h3></li>
+
+
+        <li><h3>Exercise 3.46</h3></li>
+
+
+        <li><h3>Exercise 3.47</h3></li>
+
+
+        <li><h3>Exercise 3.48</h3></li>
+
+
+        <li><h3>Exercise 3.49</h3></li>
+
+
+        <li><h3>Exercise 3.50</h3></li>
+
+
+        <li><h3>Exercise 3.51</h3></li>
+
+
+        <li><h3>Exercise 3.52</h3></li>
+
+
+        <li><h3>Exercise 3.53</h3></li>
+
+
+        <li><h3>Exercise 3.54</h3></li>
+
+
+        <li><h3>Exercise 3.55</h3></li>
+
+
+        <li><h3>Exercise 3.56</h3></li>
+
+
+        <li><h3>Exercise 3.57</h3></li>
+
+
+        <li><h3>Exercise 3.58</h3></li>
+
+
+        <li><h3>Exercise 3.59</h3></li>
+
+
+        <li><h3>Exercise 3.60</h3></li>
+
+    </ol>
+</p>
+</body>
+</html>
