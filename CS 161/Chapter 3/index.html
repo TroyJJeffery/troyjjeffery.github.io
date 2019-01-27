@@ -126,126 +126,270 @@
 
 
         <li><h3>Exercise 3.20</h3></li>
-
+            The modulo operator (%) returns the remainder of division between two integers.
 
         <li><h3>Exercise 3.21</h3></li>
-
+            8 % 3 = 2(3) r 2 = 8 <br>
+            8 % 3 returns 2
 
         <li><h3>Exercise 3.22</h3></li>
-
+            A negative sign in the numerator returns a negative answer.<br>
+            A negative sign in the denominator seems to have no effect.<br>
 
         <li><h3>Exercise 3.23</h3></li>
-
+            0, 1, 2, 3, 4
 
         <li><h3>Exercise 3.24</h3></li>
-
+            0 to (m-1)
 
         <li><h3>Exercise 3.25</h3></li>
-
+            The increment method takes the variable "value" and set's it equal to it's value plus one.<br>
+            Then it divides by the limit and returns the remainder<br>
 
         <li><h3>Exercise 3.26</h3></li>
-
+            <pre>
+            if (value/limit < 1)
+                {
+                    value =+ 1;
+                }
+            else
+                {
+                    value = 0;
+                }
+            </pre>
+            <br>
+            Well the modulo operator certainly allows for less lines of code.
 
         <li><h3>Exercise 3.27</h3></li>
-
+            <img src="images/E.3.27.png" alt="" width=30%>
+            <br>
+            I think it's because since no value was set it defaults to zero?
 
         <li><h3>Exercise 3.28</h3></li>
-
+            <img src="images/E.3.28.png" alt="" width=30%>
 
         <li><h3>Exercise 3.29</h3></li>
-
+            60 times or use the setTime muator method.
 
         <li><h3>Exercise 3.30</h3></li>
+            private Rectangle window(int width, int length)
 
+            window = new Rectangle(5, 10)
 
         <li><h3>Exercise 3.31</h3></li>
-
+            The second constructor allows the user to set a specific time instead of starting at 0:00.
 
         <li><h3>Exercise 3.32</h3></li>
-
+            It's in the method setTime that takes the two variables and puts them in the right format.<br>
+            This method is called as part of the second constructor.
 
         <li><h3>Exercise 3.33</h3></li>
-
+           <ul>
+                <li>p1.print(page7, false)</li>
+                <li>p1.print(CODE, true)</li>
+            <br>
+                <li>p1.getStatus(9)</li>
+                <li>p1.getStatus(5)</li>
+            </ul>
 
         <li><h3>Exercise 3.34</h3></li>
-
+            <pre>
+                    wall = new Square();
+                    window = new Square();
+                    roof = new Triangle();  
+                    sun = new Circle();
+                    sun2 = new Circle();
+                    person = new Person();
+            </pre>
 
         <li><h3>Exercise 3.35</h3></li>
+            <pre>
+                    roof.changeSize(60, 180);
+                    roof.moveHorizontal(20);
+                    roof.moveVertical(-60);
+                    roof.makeVisible();
 
+            </pre>
 
         <li><h3>Exercise 3.36</h3></li>
 
 
         <li><h3>Exercise 3.37</h3></li>
-
+            <img src="images/E.3.37.1.png" alt="" width=30%>
+            <img src="images/E.3.37.2.png" alt="" width=30%>
 
         <li><h3>Exercise 3.38</h3></li>
-
+            Ok, I solved this problem by
+            <ol>
+                <li>Adding a parameter to the NumberDisplay - boolean militaryTime</li>
+                <li>Made this a required parameter for NumberDisplay creation</li>
+                <li>Changed the getDisplayValue method by adding an if/else statement checking for the value isMilitary</li>
+                <li>If isMilitary is true, no change.  If isMilitary is false, removed the placeholder 0 adder.</li>
+                <li>On the ClockDisplay class, using the ClockDisplay() constructor I added a required parameter twelveHourClock</li>
+                <li>If this value is true, it changes the default value given to the hour NumberDisplay to 12 and sets it's boolean to false.</li>
+                <li>If this value is false, the NumberDisplay will make as if no changes were made.</li>
+            </ol>
+            <img src="images/E.3.38.1.png" alt="" width=30%>
+            <img src="images/E.3.38.2.png" alt="" width=30%>
+            <img src="images/E.3.38.3.png" alt="" width=30%>
 
         <li><h3>Exercise 3.39</h3></li>
-
+                Uh, both those ways are for pansies.  Clocks should be able to choose how they tell time.
 
         <li><h3>Exercise 3.40</h3></li>
+        <pre>    
+            public class Tree
 
+                private Square trunk;
+                private Triangle leaves;
+
+                public Tree()
+                {
+                    trunk = new Sqaure;
+                    leaves = new Triangle;
+
+                }
+
+                public void Setup()
+                {
+                    trunk.moveVertical(-50)
+
+                }
+                </pre>
 
         <li><h3>Exercise 3.41</h3></li>
-
+                added above
 
         <li><h3>Exercise 3.42</h3></li>
-
+                <img src="images/E.3.42.png" alt="" width=30%>
 
         <li><h3>Exercise 3.43</h3></li>
-
+        <pre>
+                mailClie1 <--> mailServ1 <--> mailClie2
+        </pre>
 
         <li><h3>Exercise 3.44</h3></li>
-
+            <img src="images/E.3.44.png" alt="" width=30%>
 
         <li><h3>Exercise 3.45</h3></li>
-
+            <img src="images/E.3.45.png" alt="" width=30%>
 
         <li><h3>Exercise 3.46</h3></li>
-
+            <img src="images/E.3.46.png" alt="" width=30%>
+ 
 
         <li><h3>Exercise 3.47</h3></li>
-
+            I think it will go to the next line down?  <br>
+            Then it goes down one more line...<br>
+            Then one more...<br>
+            This one dorps to the end because the last line completed the method (the lines in between did not execute in the program)
 
         <li><h3>Exercise 3.48</h3></li>
-
+            It stops before the line executes and the executes the line when you click step.
 
         <li><h3>Exercise 3.49</h3></li>
-
+            So the step into command actually takes us to the method that's referenced<br>
+            Once there, each step executes line by line.  In this case it prints each line as we take a step<br>
+            If we don't use the step in command it seems like it stops at the method but doesn't execute it?
 
         <li><h3>Exercise 3.50</h3></li>
+            <img src="images/E.3.50.1.png" alt="" width=30%>
+            <img src="images/E.3.50.2.png" alt="" width=30%>
 
 
         <li><h3>Exercise 3.51</h3></li>
+            The MailServer stores MailItem's.<br>
+            These items are both initially created by/sent and then received by MailClients.
 
+        <pre>
+            MailClient creates MailItem --> stored in MailServer.
+            MailClient requests MailItem <----- MailServer gives any mail for that user.
+        </pre>
 
         <li><h3>Exercise 3.52</h3></li>
-
+            Well, no new insights really.  It checks each line and lets you know the variables involved.<br>
+            Super useful, not super complicated.
 
         <li><h3>Exercise 3.53</h3></li>
+            <img src="images/E.3.53.1.png" alt="" width=30%>
+            <img src="images/E.3.53.2.png" alt="" width=30%>
 
 
         <li><h3>Exercise 3.54</h3></li>
+            <img src="images/E.3.54.1.png" alt="" width=30%>
+            <img src="images/E.3.54.2.png" alt="" width=30%>
+            <img src="images/E.3.54.3.png" alt="" width=30%>
 
 
         <li><h3>Exercise 3.55</h3></li>
+        <pre>
+            public createScreen(int xRes, int yRes)
+            {
+                new Screen(xRes, yRes)
+            }
+            
+            public int numberOfPixels()
+            {
+                return (xRes * yRes)
+            }
 
+            public void clear(boolean invert)
+            {
+                if(numberofPixels() > 2000000){
+                    xRes = 0
+                    yRes = 0
+                }
+                else{
+                    System.out.println("This feature only works on resolutions 2 million pixels and higher.")
+                }
+            }
+        </pre>
 
         <li><h3>Exercise 3.56</h3></li>
-
+            My clockDisplay constructor would need to create an additional numberDisplay with a limit of 60.<br>
+            The timeTick method would need to be updated to add a seconds increment, including a rollover statement<br>
+            Both the setTime and updateDisplay methods would need to be updated to add seconds as well.
 
         <li><h3>Exercise 3.57</h3></li>
-
+            <img src="images/E.3.57.png" alt="" width=30%>
 
         <li><h3>Exercise 3.58</h3></li>
-
+            I don't really see why not.  If we set the lowest value to increment and then set conditional if statements to check<br>
+            for 0 values until it increments the highest value.  But hey, I'm dumb and it's late so who knows.
 
         <li><h3>Exercise 3.59</h3></li>
+        <pre>
+            public NumberDisplay(int rollOverLimit,boolean isMilitary)
+            {
+                limit = rollOverlimit;
+                militaryTime = isMilitary;
+                value = 0;
+            }
 
+            public NumberDisplay(int rollOverLimit)
+            {
+                limit = rollOverLimit;
+                value = 0;
+                master = NumberDisplay;
+                militaryTime = false;
+            }
 
-        <li><h3>Exercise 3.60</h3></li>
+            public void next()
+            {
+                if(value < limit){
+                    value =+ 1;
+                }
+                if(value == limit){
+                    value = 0;
+                    master.next();
+                }
+            }
+        </pre>
+        <br>
+        <br>
+        So hopefully this code would allow you to assign your hours display first, and choose whether or not it's in military time.<br>
+        Then, you would choose the second numberDisplay constructor and assign the display before it as it's "master".<br>
+        You would set the ClockDisplay to only increment the lowest NumberDisplay and the NumberDisplay's would do the rest. <br>
 
     </ol>
 </p>
