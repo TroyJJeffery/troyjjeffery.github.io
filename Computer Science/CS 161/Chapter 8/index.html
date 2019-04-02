@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<title>Troy's GitHub - BlueJay</title>
+
+<body>
+
+<h1>Chapter 8</h1>
+
+<p>
+    <ol>
+        <li><h3>Exercise 8.1</h3></li>
+        <ul>    
+            <li>The project will display "rooms" represented as strings and allow the user to navigate using commands</li>
+            <li>go, quit and help</li>
+            <li>Go (direction) allows you to "move" to the next room.  Help returns some helpful strings.  "Quit" quits the program.</li>
+            <li>5 rooms.</li>
+            <li><img src="Images/E.8.1.png" alt="" width=50%></li>
+        </ul>
+
+        <li><h3>Exercise 8.2</h3></li>
+        <ul>
+            <li>Game: Main method which creates the others.  Has methods to process commands.</li>
+            <li>Room: Constructs a "room" consisting of a desctription and validation of exits.</li>
+            <li>Command: Processess input commands.</li>
+            <li>Parser: Checks through user inputs for specific keywords.</li>
+            <li>CommandWords: Has a list of words to check against inputs to verify commands.</li>
+        </ul>
+
+        <li><h3>Exercise 8.3</h3></li>
+            I used to play a game called MajorMud that was a completely text based game like this.<br>
+            That's really all this makes me think about.
+
+        <li><h3>Exercise 8.4</h3></li>
+            <img src="Images/E.8.4.png" alt="" width=50%>
+            <img src="Images/E.8.4.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.5</h3></li>
+            <img src="Images/E.8.5.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.6</h3></li>
+            <img src="Images/E.8.6.1.png" alt="" width=50%>
+            <img src="Images/E.8.6.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.7</h3></li>
+            <img src="Images/E.8.7.1.png" alt="" width=50%>
+            <img src="Images/E.8.7.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.8</h3></li>
+            <img src="Images/E.8.8.png" alt="" width=50%>
+            <img src="Images/E.8.8.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.9</h3></li>
+            It will give us a list of the keys in the HashMap.
+
+        <li><h3>Exercise 8.10</h3></li>
+          <ol>
+            <li>Creates a new string and gives it the value "Exits:"</li>
+            <li>Creates a set for Strings named keys</li>
+            <li>Adds all the keys from the rooms exits HashMap</li>
+            <li>Iterates over every String entry in the new keys set</li>
+            <li>Adds each "exit" key it finds to our original String</li>
+            <li>returns the string "Exits: x y z"</li>
+
+
+          </ol>
+
+        <li><h3>Exercise 8.11</h3></li>
+            <img src="Images/E.8.11.1.png" alt="" width=50%>
+            <img src="Images/E.8.11.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.12</h3></li>
+            <img src="Images/E.8.12.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.13</h3></li>
+            It changes the perspective of the rooms around you?  And the room description?
+
+        <li><h3>Exercise 8.14</h3></li>
+            <img src="Images/E.8.14.1.png" alt="" width=50%>
+            <img src="Images/E.8.14..2.png" alt="" width=50%>
+            <img src="Images/E.8.14.3.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.15</h3></li>
+            <img src="Images/E.8.15.1.png" alt="" width=50%>
+            <img src="Images/E.8.15.2.png" alt="" width=50%>
+            <img src="Images/E.8.15.3.png" alt="" width=50%>
+            <img src="Images/E.8.15.4.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.16</h3></li>
+            <img src="Images/E.8.15.2.png" alt="" width=50%>
+            <img src="Images/E.8.16.2.png" alt="" width=50%>
+            <img src="Images/E.8.16.3.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.17</h3></li>
+          Yeah our game class has a method for each command which includes a process command.
+
+        <li><h3>Exercise 8.18</h3></li>
+            <img src="Images/E.8.17.1.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.19</h3></li>
+            It's a pattern that defines clear separation between:
+            <ol>
+                <li>The user who generates events by passing information to</li>
+                <li>The controller(s) that make changes to</li>
+                <li>the model which provides data to</li>
+                <li>The view(s) which show status to the user.</li>
+            </ol>
+
+        <li><h3>Exercise 8.20</h3></li>
+            <img src="Images/E.8.20.1.png" alt="" width=50%>
+            <img src="Images/E.8.20.2.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.21</h3></li>
+
+            I have it set so there's a list of Items in the room which displays in the initial long description.<br>
+            The Item class makes the description string, although my look command needs updated to add functionality to check out items.<br>
+            The Item class should print it's description in a method to be called by other objects.
+
+
+        <li><h3>Exercise 8.22</h3></li>
+            Beatcha too it; check out my number 20 answer for rooms!
+
+        <li><h3>Exercise 8.23</h3></li>
+            Added a field in my Player class of lastDirection which is updated when game.goRoom is successful<br>
+            Created a method in the Game class that generates a hashmap in the consucter with the reverse directions e.g. (north, south)
+            If the player enters the back command a new command is created with the words go and the value of lastDirection run through the hahsmap that reverses directions.
+
+        <li><h3>Exercise 8.24</h3></li>
+            Took some reworking, but yah works like a charm.
+            <img src="Images/E.8.24.png" alt="" width=50%>
+
+        <li><h3>Exercise 8.25</h3></li>
+            I don't seem to be having any issues with "back back".
+
+        <li><h3>Exercise 8.26</h3></li>
+            
+
+        <li><h3>Exercise 8.27</h3></li>
+
+
+        <li><h3>Exercise 8.28</h3></li>
+
+
+        <li><h3>Exercise 8.29</h3></li>
+
+
+        <li><h3>Exercise 8.30</h3></li>
+
+
+        <li><h3>Exercise 8.31</h3></li>
+
+
+        <li><h3>Exercise 8.32</h3></li>
+
+
+        <li><h3>Exercise 8.33</h3></li>
+
+
+        <li><h3>Exercise 8.34</h3></li>
+
+
+        <li><h3>Exercise 8.35</h3></li>
+
+
+        <li><h3>Exercise 8.36</h3></li>
+
+
+        <li><h3>Exercise 8.37</h3></li>
+
+
+        <li><h3>Exercise 8.38</h3></li>
+
+
+        <li><h3>Exercise 8.39</h3></li>
+
+
+        <li><h3>Exercise 8.40</h3></li>
+
+
+        <li><h3>Exercise 8.41</h3></li>
+
+
+        <li><h3>Exercise 8.42</h3></li>
+
+
+        <li><h3>Exercise 8.43</h3></li>
+
+
+        <li><h3>Exercise 8.44</h3></li>
+
+
+        <li><h3>Exercise 8.45</h3></li>
+
+
+        <li><h3>Exercise 8.46</h3></li>
+
+
+        <li><h3>Exercise 8.47</h3></li>
+
+
+        <li><h3>Exercise 8.48</h3></li>
+
+
+        <li><h3>Exercise 8.49</h3></li>
+
+
+        <li><h3>Exercise 8.50</h3></li>
+
+
+        <li><h3>Exercise 8.51</h3></li>
+
+
+        <li><h3>Exercise 8.52</h3></li>
+
+
+        <li><h3>Exercise 8.53</h3></li>
+
+
+        <li><h3>Exercise 8.54</h3></li>
+
+
+        <li><h3>Exercise 8.55</h3></li>
+
+
+        <li><h3>Exercise 8.56</h3></li>
+
+
+        <li><h3>Exercise 8.57</h3></li>
+
+
+        <li><h3>Exercise 8.58</h3></li>
+
+
+        <li><h3>Exercise 8.59</h3></li>
+
+
+        <li><h3>Exercise 8.60</h3></li>
+
+    </ol>
+</p>
+</body>
+</html>
