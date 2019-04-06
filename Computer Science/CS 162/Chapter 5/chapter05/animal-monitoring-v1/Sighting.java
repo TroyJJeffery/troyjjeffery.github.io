@@ -93,4 +93,14 @@ public class Sighting
                ", period = " + period;
     }
     
+        /**
+     * 
+     */
+    public String toString()
+    {
+        return ("Animal: " + getAnimal() + 
+               ", Spotter: " + getSpotter() + 
+               ", Period: " + getPeriod() + 
+               ", Count: " + getCount() + "."); 
+    }
 }

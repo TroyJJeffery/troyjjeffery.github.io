@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.HashMap;
+import java.util.Collection;
 
 /**
  * Monitor counts of different types of animal.
@@ -117,7 +118,7 @@ public class AnimalMonitor
             if(animal.equals(sighting.getAnimal())) {
                 total = total + sighting.getCount();
             }
-        }
+        }   
         return total;
     }
     
@@ -127,13 +128,7 @@ public class AnimalMonitor
      */
     public void removeZeroCounts()
     {
-        Iterator<Sighting> it = sightings.iterator();
-        while(it.hasNext()) {
-            Sighting record = it.next();
-            if(record.getCount() == 0) {
-                it.remove();
-            }
-        }
+        sightings.removeIf(sighting -> sighting.getCount() == 0);
     }
     
     /**
@@ -209,4 +204,97 @@ public class AnimalMonitor
                  .forEach(System.out::println);
                  
     }
+   
+    
+    /**
+     * Takes two paramters and returns the result.
+     * @param spotter The spotter
+     * @param period   The period
+     */
+    public String dayAndSpotter(int spotter, int period)
+    {
+                return
+                        sightings.stream()
+                                 .filter(s -> spotter == s.getSpotter())
+                                  .filter(s -> period == s.getPeriod())
+                                  .filter(s -> s.getCount() > 0)
+                                  .map(s -> s.getAnimal())
+                                  .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+                                  .toString();      
     }
+    
+    
+    /**
+     * Returns a count of how many sightings were given for an animal, on a day, by a specific spotter.
+     * @param animal The animal to get data for.
+     * @param period The period to get data for.
+     * @param spotter The spotter to get data for.
+     * @return Returns a spotter's sightings of an animal on a specific day.
+     */
+    public int getSpottingsBySpotterByDayByAnimal(String animal, int period, int spotter)
+    {
+        int result = 
+                sightings.stream()                                     // Type = Object
+                         .filter(s -> animal.equals(s.getAnimal()))    // Removes everything but our animal.
+                         .filter(s -> period == s.getPeriod())         // Removes everything but our period.
+                         .filter(s -> spotter == s.getSpotter())       // Removes everything but our spotter.
+                         .map(s -> s.getCount())                       // Reduces Sighting object to one variable.
+                         .reduce(0, (a,b) -> a+b);                     // Combines "remaining" item into an int.
+                 
+        return result;     
+    }         
+    
+    /**
+     * Removes all records from a specificspotter.
+     * @param spotter The spotter who's records you'd like to remove.
+     */
+    public void removeSpotter(int spotter)
+    {
+        sightings.removeIf(s -> spotter == s.getSpotter());
+    }
+    
+    /**
+     * Takes a spotter ID and counts up their total count.
+     * @param spotter Spotter's ID to count for.
+     * @return total Total sightings for the spotter.
+     */
+    public long getTotalSpots(int spotter)
+    {
+        return
+        sightings.stream()
+                 .filter(s -> spotter == s.getSpotter())
+                 .count();
+        }
+    
+        /**
+         * Takes an animal as a and returns the highest count it had.
+         * @param animal The animal who's records we need.
+         * @return count The highest count.
+         */
+    public long highestCount(String animal)
+    {
+        return
+                sightings.stream()
+                         .filter(s -> animal.equals(s.getAnimal()))
+                         .map(s -> s.getCount())
+                         .max(Integer::compare)
+                         .get();                        
+        }
+    
+    /**
+     * Takes a spotter and an animal name and returns the corresponding sighting record.
+     * @param animal The animal who's record to use.
+     * @param spotter the spotter to use.
+     * @return record The sighting record that corresponds to the animal and spotter.
+     */
+    public Sighting animalSpotterIntersection(String animal, int spotter)
+    {
+        return
+                sightings.stream()
+                         .filter(s -> animal.equals(s.getAnimal()))
+                         .filter(s -> spotter == s.getSpotter())
+                         .findFirst()
+                         .get();
+    }
+}
+    
