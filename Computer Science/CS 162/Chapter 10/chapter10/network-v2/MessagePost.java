@@ -33,4 +33,11 @@ public class MessagePost extends Post
     {
         return message;
     }
+    
+    public void display()
+    {
+        super.display();
+        System.out.println(message);
+    }
+    
 }
