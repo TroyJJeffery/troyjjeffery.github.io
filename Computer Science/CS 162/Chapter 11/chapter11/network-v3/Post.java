@@ -65,20 +65,21 @@ public class Post
     {
         return timestamp;
     }
-
+    
+    protected String getTimeString()
+    {
+        return timeString(getTimeStamp());
+    }
+        
     protected String getLikeDisplay()
     {
       String like = new String();
-      like = "";
-      
-          like.concat("  -  ");    
-          System.out.println(like);
-          
+   
       if(likes > 0) {
-          like.concat("  -  " + likes + " people like this.");
+          like = like.concat("  -  " + likes + " people like this.");
       }
       else{
-          like.concat("Be the first to like this post!");
+          like = like.concat("Be the first to like this post!");
         }
         
         return like;
@@ -90,13 +91,12 @@ public class Post
       comment = new String();
 
       if(comments.isEmpty()) {
-          comment.concat("   No comments.");
+          comment = comment.concat("   No comments.");
       }
       else {
-          comment.concat("   " + comments.size() + " comment(s). Click here to view.");
+          comment = comment.concat("   " + comments.size() + " comment(s). Click here to view.");
       }
       
-      System.out.println(comment);
       return comment;
     }
         
@@ -147,7 +147,7 @@ public class Post
      * @return      A relative time string for the given time
      */
     
-    private String timeString(long time)
+    protected String timeString(long time)
     {
         long current = System.currentTimeMillis();
         long pastMillis = current - time;      // time passed in milliseconds

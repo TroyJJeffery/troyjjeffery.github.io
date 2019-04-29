@@ -44,7 +44,7 @@ public class MessagePost extends Post
     {
         System.out.println(super.getAuthor());
         System.out.println(message);
+        System.out.println(super.getTimeString());
         System.out.println(super.getComments());
-        
     }
 }

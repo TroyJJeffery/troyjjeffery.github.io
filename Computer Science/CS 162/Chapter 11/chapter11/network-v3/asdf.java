@@ -3,6 +3,7 @@ public class asdf
     private String test1;
     private String test2;
     private String test3;
+    private String test4;
     public asdf()
     {
     }
@@ -35,6 +36,14 @@ public class asdf
         System.out.println("Initial Value: " + "");
         System.out.println("Expected Outcome:  ZYX");
         System.out.println("Result: " + test3);
+    }
+    
+    public void testVar()
+    {
+        test4 = "Var";
+        
+        test4 = test4.concat("iable");
+        System.out.println(test4);
     }
     
     public void testAll()
