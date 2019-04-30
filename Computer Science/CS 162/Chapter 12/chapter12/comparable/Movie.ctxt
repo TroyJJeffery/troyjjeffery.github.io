@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Movie
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Player\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=rank\ length\ name
+comment1.target=Movie(int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=Movie()
+comment3.params=
+comment3.target=int\ getRank()
+comment4.params=
+comment4.target=int\ getLength()
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment6.params=newName
+comment6.target=void\ setName(java.lang.String)
+comment7.params=newLength
+comment7.target=void\ setLength(int)
+comment8.params=newRank
+comment8.target=void\ setRank(int)
+comment9.params=otherMovie
+comment9.target=int\ compareTo(Movie)
+numComments=10
