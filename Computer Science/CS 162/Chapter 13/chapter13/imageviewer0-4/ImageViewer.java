@@ -15,6 +15,9 @@ public class ImageViewer
 {
     private JFrame frame;
     private ImagePanel imagePanel;
+    private JLabel filenameLabel;
+    private JLabel statusLabel;
+    private JMenu Filter;
     
     /**
      * Create an ImageViewer show it on screen.
@@ -57,9 +60,17 @@ public class ImageViewer
         
         Container contentPane = frame.getContentPane();
         
+        contentPane.setLayout(new BorderLayout(6, 6));
+        
+        filenameLabel = new JLabel();
+        contentPane.add(filenameLabel, BorderLayout.NORTH);
+        
         imagePanel = new ImagePanel();
-        contentPane.add(imagePanel);
-
+        contentPane.add(imagePanel, BorderLayout.CENTER);
+        
+        statusLabel = new JLabel("Version 1.0");
+        contentPane.add(statusLabel, BorderLayout.SOUTH);
+        
         // building is done - arrange the components and show        
         frame.pack();
         frame.setVisible(true);
@@ -92,5 +103,32 @@ public class ImageViewer
             quitItem.addActionListener(e -> quit());
         fileMenu.add(quitItem);
 
+        JMenu filterMenu = new JMenu("Filter");
+        menubar.add(filterMenu);
+        
+        JMenuItem darkerItem = new JMenuItem("Darker");
+            darkerItem.addActionListener(e -> makeDarker());
+        filterMenu.add(darkerItem);
+        
+        JMenuItem lighterItem = new JMenuItem("Lighter");
+            lighterItem.addActionListener(e -> makeLighter());
+        filterMenu.add(lighterItem);
+        
+        JMenuItem thresholdItem = new JMenuItem("Threshold");
+            thresholdItem.addActionListener(e -> threshold());
+        filterMenu.add(thresholdItem);
+            
+    }
+    
+    public void makeDarker()
+    {
+    }
+    
+    public void makeLighter()
+    {
+    }
+    
+    public void threshold()
+    {
     }
 }

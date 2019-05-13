@@ -30,7 +30,7 @@ public class BorderLayoutExample
         contentPane.setLayout(new BorderLayout());
         contentPane.add(new JButton("north"), BorderLayout.NORTH);
         contentPane.add(new JButton("south"), BorderLayout.SOUTH);
-        contentPane.add(new JButton("center"), BorderLayout.CENTER);
+        //contentPane.add(new JButton("center"), BorderLayout.CENTER);
         contentPane.add(new JButton("west"), BorderLayout.WEST);
         contentPane.add(new JButton("east"), BorderLayout.EAST);
         

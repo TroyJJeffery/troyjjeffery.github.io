@@ -134,4 +134,14 @@ public class ImageViewer
     private void about()
     {
     }
+    public void addLabels()
+    {
+        Container contentPane = frame.getContentPane();
+        JLabel filenameLabel = new JLabel();
+        contentPane.add(filenameLabel);
+        imagePanel imagePanel = new ImagePanel();
+        
+        
+        }
+        
 }
