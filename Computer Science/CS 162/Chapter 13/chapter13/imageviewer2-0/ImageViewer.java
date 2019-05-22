@@ -82,6 +82,11 @@ public class ImageViewer
         showFilename(null);
     }
     
+    public void refresh(OFImage image)
+    {
+        imagePanel.setImage(image);
+    }
+    
     /**
      * Quit function: quit the application.
      */
@@ -153,6 +158,10 @@ public class ImageViewer
         filterList.add(new DarkerFilter("Darker"));
         filterList.add(new LighterFilter("Lighter"));
         filterList.add(new ThresholdFilter("Threshold"));
+        filterList.add(new GrayscaleFilter("Grayscale"));
+        filterList.add(new MirrorFilter("Mirror"));
+        filterList.add(new InvertFilter("Invert"));
+        filterList.add(new SmoothFilter("Smooth"));
         
         return filterList;
     }
@@ -181,14 +190,59 @@ public class ImageViewer
         statusLabel = new JLabel(VERSION);
         contentPane.add(statusLabel, BorderLayout.SOUTH);
         
+        // Create the toolbar with the buttons.
+        JPanel toolbar = new JPanel(new GridLayout(0, 1));
+        
+        JButton smallerButton = new JButton("Smaller");
+        toolbar.add(smallerButton);
+        smallerButton.addActionListener(e -> makeSmaller());
+        
+        JButton largerButton = new JButton("Larger");
+        largerButton.addActionListener(e -> makeLarger());
+        toolbar.add(largerButton);
+        
+        // Add toolbar into panel with flow layout for spacing
+        JPanel flow = new JPanel();
+        flow.add(toolbar);
+        
+        contentPane.add(flow, BorderLayout.WEST);
+        
         // building is done - arrange the components and show        
         showFilename(null);
         frame.pack();
-        
+                
         // center the frame on screen
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation(d.width/2 - frame.getWidth()/2, d.height/2 - frame.getHeight()/2);
         frame.setVisible(true);
+    }
+    
+    private void makeLarger()
+    {
+        if(currentImage != null) {
+            int width = currentImage.getWidth();
+            int height = currentImage.getHeight();
+            OFImage newImage = new OFImage(width * 2, height * 2);
+
+            for(int y = 0; y < height; y++) {
+                for(int x = 0; x < width; x++) {
+                    Color col = currentImage.getPixel(x, y);
+                    newImage.setPixel(x * 2, y * 2, col);
+                    newImage.setPixel(x * 2 + 1, y * 2, col);
+                    newImage.setPixel(x * 2, y * 2 + 1, col);
+                    newImage.setPixel(x * 2+1, y * 2 + 1, col);
+                }
+            }
+            
+            currentImage = newImage;
+            imagePanel.setImage(currentImage);
+            frame.pack();
+        }
+    }
+    
+    private void makeSmaller()
+    {
+        System.out.println("Making Smaller");
     }
     
     /**

@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 /**
  * Filter is an abstract superclass for all image filters in this
  * application. Filters can be applied to OFImages by invoking the apply 
@@ -9,7 +11,8 @@
 public abstract class Filter
 {
     private String name;
-
+    private Color work;
+    
     /**
      * Create a new filter with a given name.
      * @param name The name of the filter.
@@ -19,11 +22,6 @@ public abstract class Filter
         this.name = name;
     }
     
-    /**
-     * Return the name of this filter.
-     * 
-     * @return  The name of this filter.
-     */
     public String getName()
     {
         return name;
@@ -35,4 +33,5 @@ public abstract class Filter
      * @param  image  The image to be changed by this filter.
      */
     public abstract void apply(OFImage image);
-}
+}   
+

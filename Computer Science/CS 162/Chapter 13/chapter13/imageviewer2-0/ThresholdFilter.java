@@ -8,14 +8,14 @@ import java.awt.Color;
  */
 public class ThresholdFilter extends Filter
 {
-	/**
-	 * Constructor for objects of class ThresholdFilter.
+    /**
+     * Constructor for objects of class ThresholdFilter.
      * @param name The name of the filter.
-	 */
-	public ThresholdFilter(String name)
+     */
+    public ThresholdFilter(String name)
     {
         super(name);
-	}
+    }
 
     /**
      * Apply this filter to an image.
@@ -23,7 +23,7 @@ public class ThresholdFilter extends Filter
      * @param  image  The image to be changed by this filter.
      */
     public void apply(OFImage image)
-    {
+    {         
         int height = image.getHeight();
         int width = image.getWidth();
         for(int y = 0; y < height; y++) {
@@ -33,13 +33,13 @@ public class ThresholdFilter extends Filter
                 if(brightness <= 85) {
                     image.setPixel(x, y, Color.BLACK);
                 }
-                else if(brightness <= 170) {
-                    image.setPixel(x, y, Color.GRAY);
-                }
-                else {
+                    else if(brightness <= 170) {
+                        image.setPixel(x, y, Color.GRAY);
+                    }
+                    else {
                     image.setPixel(x, y, Color.WHITE);
                 }
-            }
+    }
+    }
         }
     }
-}

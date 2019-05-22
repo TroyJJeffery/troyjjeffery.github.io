@@ -29,7 +29,7 @@ public class OFImage extends BufferedImage
     {
         super(width, height, TYPE_INT_RGB);
     }
-
+    
     /**
      * Set a given pixel of this image to a specified color. The
      * color is represented as an (r,g,b) value.

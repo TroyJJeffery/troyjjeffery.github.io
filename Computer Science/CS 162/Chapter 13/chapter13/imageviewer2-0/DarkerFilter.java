@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 /**
  * An image filter to make the image a bit darker.
  * 
@@ -30,4 +32,7 @@ public class DarkerFilter extends Filter
             }
         }
     }
+        
 }
+    
+
