@@ -33,6 +33,7 @@ public class ImageViewer
     private JButton smallerButton;
     private JButton largerButton;
     private OFImage currentImage;
+    private String brushHead = "small";
     // Current editing color.
     private Color currentColor;
     
@@ -289,7 +290,14 @@ public class ImageViewer
             // Replace pixel at the current position with the currentColor.
             int x = event.getX();
             int y = event.getY();
-            currentImage.setPixel(x, y, currentColor);
+            
+            imagePanel.addMouseListener(new MouseAdapter(){
+                        public void mousePressed(MouseEvent e){
+                            applyBrush(brushHead, x, y);}
+                        public void mouseDragged(MouseEvent e){
+                            applyBrush(brushHead, x, y);}
+                        });
+
             imagePanel.repaint();
         }
         else {
@@ -357,6 +365,34 @@ public class ImageViewer
         frame.setVisible(true);
     }
     
+    private void applyBrush(String head, int x, int y)
+    {
+        if(head=="small"){
+            currentImage.setPixel(x, y, currentColor);
+        }
+        else if(head=="medium"){
+            for(int i=0; i < 3;i++){
+                for(int j=0; j < 3;j++) {
+                    int nx = (x-1)+i;
+                    int ny = (y-1)+j;
+                    currentImage.setPixel(nx, ny, currentColor);
+                }   
+            }
+        }
+        else if(head=="large"){
+            for(int i=0; i < 5;i++){
+                for(int j=0; j<5; j++){
+                    int nx = (x-2)+i;
+                    int ny = (y-2)+j;
+                    currentImage.setPixel(nx, ny, currentColor);
+                }
+            }
+        }
+        else{
+            System.err.println("No appropriate brush head selected");
+        }
+    }
+    
     /**
      * Create the main frame's menu bar.
      * 
@@ -409,6 +445,25 @@ public class ImageViewer
             menu.add(item);
          }
 
+        // create the Brush menu
+        JMenu brush = new JMenu("Brush");
+        menubar.add(brush);
+        
+        JMenuItem small, medium, large;
+        
+        
+        small = new JMenuItem("Small");
+            small.addActionListener( e -> brushHead = "small");
+        brush.add(small); 
+        
+        medium = new JMenuItem("Medium");
+            medium.addActionListener( e -> brushHead = "medium");
+        brush.add(medium);
+        
+        large = new JMenuItem("Large");
+            large.addActionListener( e -> brushHead = "large");
+        brush.add(large);    
+        
         // create the Help menu
         menu = new JMenu("Help");
         menubar.add(menu);

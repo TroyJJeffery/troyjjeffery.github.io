@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=DATA
-comment0.text=\r\n\ This\ class\ just\ holds\ a\ list\ of\ people\ in\ a\ static\ method\ so\ they\ can\ be\ called.\r\n\r\n\ @author\ Troy\ Jeffery\r\n\ @version\ 5/26/2019\r\n
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-comment2.params=index
-comment2.target=Person\ getPerson(int)
-numComments=3

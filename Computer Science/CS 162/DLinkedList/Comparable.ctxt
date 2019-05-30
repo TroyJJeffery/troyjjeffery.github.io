@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Comparable
+comment0.text=\r\n\ Write\ a\ description\ of\ interface\ Comparable\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=obj
+comment1.target=int\ compareTo(java.lang.Object)
+numComments=2
