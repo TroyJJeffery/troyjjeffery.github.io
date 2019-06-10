@@ -9,36 +9,45 @@ import java.util.ArrayList;
 public class DATA
 {
     public static ArrayList<Person> peeps;
+    public static ArrayList data;
+    
+    public DATA()
+    {
+        peeps = new ArrayList<>();
+        Person troy = new Person("Troy", "Jeffery");
+        Person ryan = new Person("Ryan", "Harris");
+        Person maddy = new Person("Maddy", "Jeffery");
+        Person israel = new Person ("Israel", "Adesanya");
+        Person dog = new Person("Brown", "Dog");
+        peeps.add(troy);
+        peeps.add(ryan);
+        peeps.add(maddy);
+        peeps.add(israel);
+        peeps.add(dog);     
+    }
     
     public static void main(String[] args)
     {
-        peeps = new ArrayList<>();
-        Person troy = new Person("Troy", "Jeffery");
-        Person ryan = new Person("Ryan", "Harris");
-        Person maddy = new Person("Maddy", "Jeffery");
-        Person israel = new Person ("Israel", "Adesanya");
-        Person dog = new Person("Brown", "Dog");
-        peeps.add(troy);
-        peeps.add(ryan);
-        peeps.add(maddy);
-        peeps.add(israel);
-        peeps.add(dog);
+
     }
+    public static ArrayList getPeeps()
+    {
+        return peeps;
+    }
+    
     
     public static Person getPerson(int index)
     {
-        peeps = new ArrayList<>();
-        Person troy = new Person("Troy", "Jeffery");
-        Person ryan = new Person("Ryan", "Harris");
-        Person maddy = new Person("Maddy", "Jeffery");
-        Person israel = new Person ("Israel", "Adesanya");
-        Person dog = new Person("Brown", "Dog");
-        peeps.add(troy);
-        peeps.add(ryan);
-        peeps.add(maddy);
-        peeps.add(israel);
-        peeps.add(dog);
         return peeps.get(index);
+    }
+    
+    public static ArrayList getList() throws Exception
+    {
+        ArrayList al = new ArrayList();
+        ReadFrom rf = new ReadFrom();
+        
+        al.add(rf.readData());
+        return al;
     }
     
 }

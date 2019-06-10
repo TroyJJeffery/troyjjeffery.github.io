@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WriteTo
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FileWriter\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=WriteTo()
+comment2.params=
+comment2.target=void\ write()
+comment2.text=public\ static\ void\ main(String[]\ args)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ String\ fileName\ \=\ "out.txt";\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ try\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ PrintWriter\ outputStream\ \=\ new\ PrintWriter(fileName);\r\n\ \ \ \ \ \ \ \ \ \ \ \ outputStream.println("test");\ //stores\ in\ RAM\ first.\r\n\ \ \ \ \ \ \ \ \ \ \ \ outputStream.close();//\ pushes\ data\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ catch\ (FileNotFoundException\ e)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+comment3.params=
+comment3.target=void\ writeNumbers()
+numComments=4

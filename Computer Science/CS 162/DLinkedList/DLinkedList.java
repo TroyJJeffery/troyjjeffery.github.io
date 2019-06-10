@@ -169,6 +169,7 @@ public class DLinkedList<T>
         if(getSize() < index || index < 0){
             System.err.println("Must add within index.\n" + 
                                "Current Size is :" + getSize());
+            return;
         }
         else if(index == 0){
             deleteFirst();
@@ -195,10 +196,15 @@ public class DLinkedList<T>
      */
     void deleteLast()
     {
-        if(getStart() == null){
-            System.err.println("The list is empty!:");
+        try {
+            int i = 1/getSize();        
         }
-        else if(getSize() ==1){
+        catch (Exception e) {
+            System.out.println("The list is empty!");
+            return;
+        }
+        
+        if(getSize() ==1){
             deleteOne();
         }      
         else{
@@ -219,10 +225,15 @@ public class DLinkedList<T>
      */
     void deleteFirst()
     {
-        if(getStart() == null){
-            System.err.println("The list is empty!:");
+        try {
+            int i = 1/getSize();        
         }
-        else if(getSize() ==1){
+        catch (Exception e) {
+            System.out.println("The list is empty!");
+            return;
+        }
+        
+        if(getSize() ==1){
             deleteOne();
         }      
         else{
