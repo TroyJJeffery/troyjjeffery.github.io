@@ -3,13 +3,23 @@ import FractionModule
 
 class FractionTest(unittest.TestCase):
 
+    #Set's up class instances for each test.
+    def setUp(self):
+        self.f1 = FractionModule.Fraction(1,2)
+        self.f2 = FractionModule.Fraction(1,4)
+        self.f3 = FractionModule.Fraction(-1,2)
+        self.f4 = FractionModule.Fraction(1,-4)
+        self.f5 = FractionModule.Fraction(-1,-2)
+
     #Verifies addition functions are working normally.
     def test_add(self):
+        """
         f1 = FractionModule.Fraction(1,2)
         f2 = FractionModule.Fraction(1,4)
         f3 = FractionModule.Fraction(-1,2)
         f4 = FractionModule.Fraction(1,-4)
         f5 = FractionModule.Fraction(-1,-2)
+        """
 
         self.assertEqual(f1+f2, FractionModule.Fraction(3,4))
         self.assertEqual(f3+f4, FractionModule.Fraction(-3,4))
@@ -95,9 +105,9 @@ class FractionTest(unittest.TestCase):
         f4 = FractionModule.Fraction(1,-4)
         f5 = FractionModule.Fraction(-1,-2)
 
-        self.assertEqual(f1==f2, False)
-        self.assertEqual(f3==f4, False)
-        self.assertEqual(f5==f5, True)
+        self.assertEqual(str(f1+f2), "3/4")
+        self.assertEqual(str(f3+f4), "-3/4")
+        self.assertEqual(str(f5+f5), "1/1")
 
 if __name__ == '__main__':
     unittest.main(exit=False)
