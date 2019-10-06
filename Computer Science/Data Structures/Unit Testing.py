@@ -13,13 +13,12 @@ class FractionTest(unittest.TestCase):
 
     #Verifies addition functions are working normally.
     def test_add(self):
-        """
         f1 = FractionModule.Fraction(1,2)
         f2 = FractionModule.Fraction(1,4)
         f3 = FractionModule.Fraction(-1,2)
         f4 = FractionModule.Fraction(1,-4)
         f5 = FractionModule.Fraction(-1,-2)
-        """
+
 
         self.assertEqual(f1+f2, FractionModule.Fraction(3,4))
         self.assertEqual(f3+f4, FractionModule.Fraction(-3,4))

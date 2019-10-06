@@ -30,50 +30,50 @@ class Fraction:
         
         cd = gcd(top,bottom)
 
-        self.num = top//cd
-        self.den = bottom//cd
+        self.__num = top//cd
+        self.__den = bottom//cd
 
     #Converts fraction into a string.
     def __str__(self):
 
-        return str(self.num)+"/"+str(self.den)
+        return str(self.__num)+"/"+str(self.__den)
 
     #Adds two fractions together.
     def __add__(self, otherfraction):
 
-        newnum = self.num*otherfraction.den+self.den*otherfraction.num
-        newden = self.den*otherfraction.den
+        newnum = self.__num*otherfraction.__den+self.__den*otherfraction.__num
+        newden = self.__den*otherfraction.__den
 
         return Fraction(newnum,newden)
 
     #Subtracts one fraction from another.
     def __sub__(self, frac):
         # a/b-c/d
-        ad = self.num * frac.den
-        bc = self.den * frac.num
-        newden = self.den * frac.den
+        ad = self.__num * frac.__den
+        bc = self.__den * frac.__num
+        newden = self.__den * frac.__den
         newnum = ad - bc
 
         return Fraction(newnum, newden)
 
     #Multiplies two fractions.
     def __mul__(self, frac):
-        newnum = self.num * frac.num
-        newden = self.den * frac.den
+        newnum = self.__num * frac.__num
+        newden = self.__den * frac.__den
 
         return Fraction(newnum, newden)
 
     #Divides one fraction into another.
     def __truediv__(self, frac):
-        newnum = self.num * frac.den
-        newden = self.den * frac.num
+        newnum = self.__num * frac.__den
+        newden = self.__den * frac.__num
 
         return Fraction(newnum, newden)
 
     #Compares two fractions to each other.
     def __eq__(self, other):
-        firstnum = self.num * other.den
-        secondnum = other.num * self.den
+        firstnum = self.__num * other.__den
+        secondnum = other.__num * self.__den
 
         return firstnum == secondnum
 
@@ -83,8 +83,8 @@ class Fraction:
 
     #Checks if one fraction is greater than another.
     def __gt__(self, frac):
-        firstnum = self.num * frac.den
-        secondnum = self.den * frac.num
+        firstnum = self.__num * frac.__den
+        secondnum = self.__den * frac.__num
 
         return firstnum > secondnum
 
@@ -96,7 +96,7 @@ class Fraction:
     #Formats fractions for display.
     def show(self):
 
-        print(self.num, "/", self.den)
+        print(self.__num, "/", self.__den)
 
 
 ############################################################################################
