@@ -1,15 +1,13 @@
-#Finds the least common denominator between two fractions.
-def gcd(m,n):
+"""
+Author : Troy Jeffery
 
-    while m%n != 0:
-        oldm=m
-        oldn=n
+Fraction : Takes two integers and makes them into a fraction that can do basic math functions.
 
+Variables
+__num : The object's numerator as an integer.
+__den : The objects denominator as an integer.
 
-        m=oldn
-        n=oldm%oldn
-    return n
-
+"""
 class Fraction:
     #Constructor for class Fraction
     def __init__(self, top, bottom):
@@ -27,11 +25,25 @@ class Fraction:
 
         if bottom == 0: # if x/0 result error
             raise ValueError ("Cannot divide by zero.")
+
+       #Finds the least common denominator between two fractions.
+        def gcd(m,n):
+
+            while m%n != 0:
+                oldm=m
+                oldn=n
+
+
+                m=oldn
+                n=oldm%oldn
+            return n    
         
         cd = gcd(top,bottom)
 
         self.__num = top//cd
         self.__den = bottom//cd
+
+
 
     #Converts fraction into a string.
     def __str__(self):
